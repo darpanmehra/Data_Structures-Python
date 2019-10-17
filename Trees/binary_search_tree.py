@@ -47,12 +47,11 @@ class Node:
                 current = self.data
                 self.data = self.left
                 del current
-            else:
+            else: # case 3 where parent has 2 children
                 minval = self.minimum_value(self.right)
                 self.data = minval.data
                 self.right = self.right.deletenode(minval.data)
         return self
-        # case 3 where parent has 2 children
 
     def inorder(self):
         if self.left:
@@ -90,13 +89,13 @@ if __name__ == '__main__':
     printval = input("Do you wish to print tree (y/n): ")
     if printval.lower() in ['y', 'yes']:
         print("Inorder traversal: ")
-        root.inorder()
+        root.inorder() #Calling Inorder Travesal of Tree
         print("\n")
         print("Preorder traversal: ")
-        root.preorder()
+        root.preorder() #Calling Preorder Travesal of Tree
         print("\n")
         print("Postorder traversal: ")
-        root.postorder()
+        root.postorder() #Calling Postorder Travesal of Tree
 
     # Delete Node driver
     num_del_ask = input("Do you wish to delete any element (y/n): ")
