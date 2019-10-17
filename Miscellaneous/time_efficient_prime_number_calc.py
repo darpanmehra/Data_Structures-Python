@@ -1,7 +1,7 @@
 import math
 num = int(input("Enter number: "))
 if num > 1:
-    for i in range(2, int(math.sqrt(num)) + 1):
+    for i in range(2, int(math.sqrt(num)) + 1): #Iterating till the square root of number
         if (num % i) == 0:
             print(num, "is not a prime number")
             break
